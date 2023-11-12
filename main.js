@@ -9,7 +9,7 @@ function main() {
     let startTime = Date.now()
     let resetTime = () => startTime = Date.now()
 
-    setInterval(() => timeElement.textContent = Math.floor((Date.now() - startTime) / 1000), 1000)
+    setInterval(() => timeElement.textContent = Math.floor((Date.now() - startTime) / 1000), 600)
 
     /** Seleccionar el elemento que indica la cantidad de movimientos del jugador */
     const movCounterElement = document.querySelector('#movCounter')
@@ -174,8 +174,8 @@ function makeMovableTopPiecesWithClick(towers, onMove, posMove) {
                 tower.appendChild(pieceToMove)
                 posMove()
                 pieceToMove = null
-            } else {
-                pieceToMove = null
+            } else if (pieceToMove) {
+                pieceToMove = topPiece
             }
         })
     }
