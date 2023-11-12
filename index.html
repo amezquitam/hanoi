@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Torres de Hanoi</title>
+</head>
+<body>
+    <main id="container">
+        <div id="result" style="display: none;"></div>
+        <!-- Pantalla que se posiciona en el centro de la pantalla -->
+        <div id="screen">
+            <!-- Panel superior para manejar la configuración del juego -->
+            <div id="options">
+                <select id="dificult-selector">
+                    <option value="easy" selected>Fácil</option>
+                    <option value="mid">Medio</option>
+                    <option value="hard">Difícil</option>
+                    <option value="bobo">Estúpido</option>
+                </select>
+                <span>Tiempo: <span id="time">0</span> segs</span>
+                <span>Movimientos: <span id="movCounter"></span></span>
+            </div>
+
+            <!-- Resto de la pantalla, donde se muestran las torres y las fichas -->
+            <div id="towers">
+                <div class="tower-wrap">
+                    <div class="tower" id="initial-tower"></div>
+                </div>
+                <div class="tower-wrap">
+                    <div class="tower" id="mid-tower"></div>
+                </div>
+                <div class="tower-wrap">
+                    <div class="tower" id="final-tower"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

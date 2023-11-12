@@ -1,0 +1,137 @@
+:root {
+    --main-bg: linear-gradient(106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
+    --screen-bg: #ffffff77;
+    --tower-color: #ffcfd1;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS';
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-bg);
+    display: grid;
+    place-items: center;
+}
+
+#screen {
+    height: 90%;
+    width: 80%;
+    background-color: var(--screen-bg);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    overflow: hidden;
+}
+
+#options {
+    background-color: var(--screen-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dificult-selector {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: 'Trebuchet MS';
+}
+
+#towers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tower-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tower {
+    position: relative;
+    height: 60%;
+    width: 25px;
+    background-color: var(--tower-color);
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    outline: 1px #eb8ce6 solid;
+    z-index: 1;
+}
+
+.tower .piece {
+    height: 25px;
+    border-radius: 10px 10px 0 0;
+    outline: 1px #ff1111 solid;
+    z-index: 2;
+}
+
+.tower .piece:hover {
+    outline: 3px #ff83f9 solid;
+    z-index: 3;
+}
+
+#result {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-card {
+    padding: 40px;
+    border-radius: 30px;
+    background-color: white;
+    z-index: 9;
+}
+
+@media (max-width: 662px) {
+    .tower {
+        width: 15px;
+    }
+    #screen {
+        width: 100%;
+        height: 100%;
+    }
+    .tower {
+        height: 40%;
+    }
+}
+
+
+/* Gestion de tamaños de las piezas */
+.size-8 {
+    width: 655%;
+}
+.size-7 {
+    width: 590%;
+}
+.size-6 {
+    width: 525%;
+}
+.size-5 {
+    width: 460%;
+}
+.size-4 {
+    width: 395%;
+}
+.size-3 {
+    width: 330%;
+}
+.size-2 {
+    width: 265%;
+}
+.size-1 {
+    width: 200%;
+}
